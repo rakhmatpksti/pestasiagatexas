@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Wali Songo - Benar atau Salah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div id="setup-screen">
+            <div class="icon">📜</div>
+            <h2>Kuis Wali Songo</h2>
+            <p>Tebak apakah nama dan foto yang muncul sesuai!</p>
+            <button onclick="startGame()" class="btn-start">Mulai Main</button>
+            <br><br>
+            <a href="../index.html" class="link-back">Kembali ke Menu Utama</a>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <div class="header-info">
+                <span id="question-number">Soal 1 / 10</span>
+                <span id="score-display">Skor: 0</span>
+            </div>
+
+            <div class="card">
+                <div class="img-wrapper">
+                    <img id="walisongo-img" src="" alt="Wali Songo">
+                </div>
+                <h2 id="walisongo-name">NAMA WALI</h2>
+            </div>
+
+            <div class="button-group">
+                <button onclick="checkAnswer(false)" class="btn-false">SALAH</button>
+                <button onclick="checkAnswer(true)" class="btn-true">BENAR</button>
+            </div>
+            
+            <div class="footer-buttons">
+                <button onclick="resetGame()" class="btn-reset">Reset Soal</button>
+                <a href="../index.html" class="btn-back">Menu Utama</a>
+            </div>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <h2>Permainan Selesai!</h2>
+            <div class="score-circle">
+                <h1 id="final-score-value">0</h1>
+            </div>
+            <p id="result-message"></p>
+            <button onclick="startGame()" class="btn-start">Main Lagi</button>
+            <br><br>
+            <a href="../index.html" class="link-back">Kembali ke Menu Utama</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
