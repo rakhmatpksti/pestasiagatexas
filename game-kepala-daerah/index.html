@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cari Pemimpin Daerah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrapper">
+    <div class="header">
+        <h2>Cari Pasangan Daerah</h2>
+        <div class="score-board">Skor: <span id="score">0</span></div>
+    </div>
+
+    <div class="row-photos" id="photo-container"></div>
+
+    <div class="instruction-box">
+        <p id="msg">Klik sebuah kartu di bawah untuk melihat wilayahnya!</p>
+    </div>
+
+    <div class="row-cards" id="card-container"></div>
+
+    <div class="controls">
+        <button onclick="initGame()" class="btn-reset">Reset & Acak Ulang</button>
+        <a href="../index.html" class="btn-menu">Menu Utama</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

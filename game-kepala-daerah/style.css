@@ -1,0 +1,45 @@
+* { box-sizing: border-box; -webkit-user-select: none; user-select: none; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f1f3f6; height: 100vh; overflow: hidden; }
+
+.game-wrapper { width: 100%; height: 100vh; display: flex; flex-direction: column; padding: 15px; }
+.header { height: 7vh; display: flex; justify-content: space-between; align-items: center; }
+.score-board { color: #2ecc71; font-weight: bold; font-size: 24px; }
+
+/* Kontainer Baris */
+.row-photos, .row-cards { 
+    height: 28vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 12px; 
+    margin: 10px 0;
+}
+
+.photo-box { 
+    width: 120px; height: 160px; /* Ukuran tetap agar stabil */
+    border: 2px solid #ddd; border-radius: 12px; 
+    background: white; padding: 6px; cursor: pointer; transition: 0.3s;
+}
+.photo-box img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.photo-box.selected { border-color: #e74c3c; transform: shake 0.5s; }
+
+.card { 
+    width: 120px; height: 160px; border-radius: 12px; cursor: pointer;
+    background-color: #34495e; color: white; font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 10px; font-weight: bold; transition: 0.3s;
+}
+.card.open { background-color: #fff; color: #2c3e50; border: 3px solid #3498db; }
+
+.instruction-box { height: 5vh; text-align: center; color: #7f8c8d; font-weight: bold; }
+.controls { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+
+.btn-reset { background: #27ae60; color: white; border: none; padding: 12px 35px; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 16px; }
+.btn-menu { color: #95a5a6; text-decoration: none; font-size: 14px; margin-top: 5px; }
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
