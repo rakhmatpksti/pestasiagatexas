@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Koneksi Tanaman Obat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrapper">
+    <div class="header">
+        <h2>Pasangkan Tanaman Obat</h2>
+        <div class="score-board">Skor: <span id="score">0</span></div>
+    </div>
+
+    <div class="game-area">
+        <div class="row" id="row-images"></div> <div class="row" id="row-names"></div>  <div class="row" id="row-funcs"></div>  </div>
+
+    <div class="controls">
+        <button id="btn-connect" onclick="processConnection()">HUBUNGKAN PILIHAN</button>
+        <div class="nav-btns">
+            <button onclick="location.reload()" class="btn-alt">Reset</button>
+            <a href="../index.html" class="btn-alt">Menu Utama</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

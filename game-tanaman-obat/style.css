@@ -1,0 +1,131 @@
+/* Update pada style.css */
+
+* { 
+    box-sizing: border-box; 
+    -webkit-user-select: none; 
+    user-select: none; 
+    touch-action: manipulation; /* Optimasi sentuhan tablet */
+}
+
+body {
+    margin: 0; 
+    font-family: 'Segoe UI', sans-serif; 
+    height: 100vh;
+    background-color: #f4f9f4; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center;
+}
+
+.game-wrapper {
+    width: 100%; 
+    max-width: 1100px; 
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    padding: 5px 15px; /* Padding samping dikurangi */
+}
+
+.header { 
+    height: 8vh; 
+    text-align: center; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.header h2 { font-size: 1.2rem; color: #2d5a27; margin: 0; }
+.score-board { font-weight: bold; font-size: 18px; color: #27ae60; }
+
+.game-area {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; /* Mengetengahkan semua baris */
+    gap: 15px; /* Jarak antar baris diperlebar agar tidak sesak */
+}
+
+.row {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    height: 20vh; /* Diperpendek dari 25vh agar lebih tipis */
+}
+
+.item {
+    background: white; 
+    border: 1.5px solid #d1d8d1; 
+    border-radius: 12px;
+    width: 11.5%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+    font-size: 10px; /* Ukuran font diperkecil sedikit */
+    text-align: center; 
+    padding: 8px; 
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.item img { 
+    max-width: 100%; 
+    max-height: 70%; /* Dikecilkan agar kotak tidak terdorong besar */
+    object-fit: contain; 
+    pointer-events: none; 
+    margin-bottom: 4px;
+}
+
+.item b { font-size: 11px; line-height: 1.1; } /* Nama tanaman */
+
+/* Status Seleksi */
+.item.selected { 
+    border-color: #2980b9; 
+    background-color: #f0f7ff; 
+    transform: translateY(-3px); /* Memberi efek angkat saat dipilih */
+    box-shadow: 0 4px 8px rgba(41,128,185,0.2);
+}
+
+.item.matched { 
+    opacity: 0.2; 
+    pointer-events: none; 
+    border-color: #27ae60; 
+    background-color: #f9f9f9;
+}
+
+.controls { 
+    height: 18vh; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+#btn-connect {
+    background: #2ecc71; 
+    color: white; 
+    border: none; 
+    padding: 12px 35px;
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 50px; 
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+#btn-connect:active { transform: scale(0.95); }
+
+.nav-btns { display: flex; gap: 15px; }
+.btn-alt { 
+    background: transparent; 
+    color: #7f8c8d; 
+    padding: 5px 15px; 
+    text-decoration: none; 
+    border: 1px solid #bdc3c7;
+    border-radius: 8px; 
+    font-size: 12px; 
+    cursor: pointer;
+}
